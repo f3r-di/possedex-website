@@ -1,31 +1,49 @@
 @font-face {
-    font-family: "RelayComp-Black";
-    src: url('/fonts/relaycomp-black.ttf');
+    font-family: "Brown";
+    src: local ('/fonts/lineto-brown-bold.ttf');
+    src: local ('fonts/lineto-brown-bold.ttf');
+    src: url ('/fonts/lineto-brown-bold.ttf');
+
+      font-weight: bold;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family : "RelayComp-Black";
+@font-face {
+    font-family: Brown;
+    src: local ('/fonts/lineto-brown-bold.ttf');
+    src: local ('fonts/lineto-brown-bold.ttf');
+    src: url ('/fonts/lineto-brown-bold.ttf');
 }
 
+
+
+
+:root {
+    --dark-color: #0b0b17;
+    --bright-color: #FFBF00; 
+    --bright-color-2: #956922; 
+    --white-color: white;
+}
 /*.main-title { font-size : 46px}*/
-
 /* Space out content a bit */
 body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0rem;
+    font-family: Brown;
+    font-size: 0.85em;
+    color: var(--dark-color);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
+
 }
 
 /* Custom page header */
 .header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
+    position:fixed;
+    width: 100%;
+    margin: 0;
+
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -37,24 +55,87 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
+padding-bottom: 0.5rem;
+  color: white;
+  border-top: 0;
+    background-color: var(--dark-color);
+}
+#section1{
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+padding-top:calc(50vh - 130px);       
+
+}
+#logo{
+    width:60px;
+    margin: 3%;
 }
 
-/* Customize container */
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
-  }
-}
+
+
+
 .container-narrow > hr {
   margin: 2rem 0;
 }
 
+    
+.section{
+    padding-top: 120px;
+    margin-bottom: 5px;
+    min-height: 400px;
+}
+#section2{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    font-weight: 300;
+            padding-bottom: 120px;
+
+}
+h2 {
+    color: var(--bright-color);
+    margin-bottom: 3rem!important;
+}    
+.text{
+    line-height: 1.75rem;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+}
+.graphique{
+    background-color: var(--bright-color);
+    padding: 22px;
+    max-width: 320px;
+
+}
+h4{
+    font-size:0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.75rem;
+    color: var(--bright-color-2);
+}
+.visuel{width: 100%;  margin-left: -3px;}
+.legende{font-size:0.7rem;  color:var(--bright-color); font-weight:normal;}
+
+#section3{
+};
+
+.cadre{
+    border-bottom: 1px solid var(--dark-color);
+    padding-left: 2rem;
+        padding-right: 3rem;
+}
+.visuel2{
+        border: 1px solid var(--dark-color);
+  
+    width: 100%;
+}
+
+
+
+
 /* Main marketing message and sign up button */
 .jumbotron {
   border-bottom: .05rem solid #e5e5e5;
-  color : #555;
   text-align : left;
 }
 .jumbotron .btn {
@@ -76,12 +157,12 @@ body {
   .header,
   .marketing,
   .footer {
-    padding-right: 0;
-    padding-left: 0;
+ /*   padding-right: 0;*/
+/*    padding-left: 0;*/
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 12vh;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
@@ -90,27 +171,126 @@ body {
 }
 
 
-.possedex .nav-pills .nav-link.active{
-    background-color : #555;
-    color : #fff;
+    
+
+.nav{
+    margin: 3rem !important;
+    font-size:1.1em;
+    font-weight: 400;
+    color: var(--dark-color) ;
 }
-.possedex .nav-pills .nav-link{
-    color : #555;
+
+.container-fluid {
+    width: 90vw;
+}
+
+.section {    margin-right: -5vw;
+    margin-left:  -5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;}
+    
+    
+    .footer { 
+        margin-right: -5vw;
+    margin-left:  -5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;}
+    
+    h1{
+    font-size: 4vH!important;
+    font-weight: 500 !important;
+    line-height: 6vh !important;
+    max-width: 900px;
+}
+
+
+    
+@media (min-width: 768px) { 
+.nav{visibility:visible;}
+}
+    
+
+@media (min-width: 922px) { 
+.container-fluid {width: 840px;}
+.section {
+    margin-right: calc(-100vw / 2 + 840px / 2)!important;
+    margin-left: calc(-100vw / 2 + 840px / 2)!important;
+    padding-left: calc(100vw / 2 - 840px / 2)!important;
+    padding-right: calc(100vw / 2 - 840px / 2) !important;
+
+}
+    .footer {
+    margin-right: calc(-100vw / 2 + 840px / 2)!important;
+    margin-left: calc(-100vw / 2 + 840px / 2)!important;
+    padding-left: calc(100vw / 2 - 840px / 2)!important;
+    padding-right: calc(100vw / 2 - 840px / 2) !important;
+
+}
+h1{
+    font-size: 2.1REM !important;
+    font-weight: 500 !important;
+    line-height: 3rem !important;
+    max-width: 900px;
+}
+}
+.possedex .nav-pills .nav-link.active{
+
+    background:none !important;
+}
+.possedex .nav-pills .nav-link.active span{
+
+    padding-bottom:1,5px;
+}
+ 
+.possedex .nav-pills .nav-link:hover{
+    color:var(--bright-color) !important;
+        transition-property: color;
+    transition-duration: 0.2s;
+
 }
 .possedex h3.text-muted{
     color : #555
 }
 
-.possedex a { color : #111;font-weight:bold; }
+.possedex a {  }
 
 
 h1, h2, h3, h4, h5, h6, #result label{
-    color       : #00A86B;
-    font-family : "RelayComp-Black";
+    font-family : Brown;
 }
+
+.titre{
+    font-weight: 900 !important;
+    color: var(--bright-color);
+}
+
+.form-control{
+    height: 85px;
+    padding: 0.5rem 2rem;
+    border-radius: 0 !important;
+    border:2px solid var(--dark-color)!important;
+    font-size:1.5rem;
+    color: var(--dark-color) !important;
+
+}
+.input-group-addon{
+    border-left:0;
+    border-bottom :2px solid var(--dark-color)!important;
+    border-right: 2px solid var(--dark-color)!important;
+    border-top: 2px solid var(--dark-color)!important;
+    background-color: white !important;
+    border-radius: 0 !important;
+}
+
+.btn{
+    font-size:1.5rem;
+}
+::placeholder {
+  color: var(--dark-color)!important;
+}
+
 #result {
-    background-color : #1d2771;
-    color            : #f4f4f8;
+    color            : var(--dark-color);
     padding          : 20px;
 }
 #result label {
@@ -125,6 +305,12 @@ h1, h2, h3, h4, h5, h6, #result label{
 color:#555;
 font-weight:normal;
 text-decoration : none;
+}
+a {
+    color: inherit !important;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
 }
 
 #result a, .possedex a.detail-owner, .possedex a.detail-media {
